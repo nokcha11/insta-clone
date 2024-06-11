@@ -1,0 +1,165 @@
+/* common */
+* { margin: 0; padding: 0;}
+li { list-style-type: none;}
+a { text-decoration: none; color: inherit;}
+
+:root {
+  --body-bg: #fafafa;
+  --box-bg: #fff;
+  --box-border-color: #dbdbdb;
+  --txt-color: #262626;
+  --txt-second-color: #8e8e8e;
+  --btn-bg: #0095f6;
+  --btn-color: #fff;
+  --fb-color: #385185;
+  --a-color: #00376b;
+}
+
+.dark {
+  --body-bg: #151515;
+  --box-bg: #151515;
+  --box-border-color: #262626;
+  --txt-color: #d2d2d2;
+}
+
+body { background-color: var(--body-bg);}
+
+.wrap { 
+  /* width: 500px; */
+  margin: 100px auto;
+  text-align: center;
+}
+
+.main { 
+  width: 300px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+/* form */
+.form-box {
+  text-align: center;
+  border: 1px solid var(--box-border-color);
+  border-radius: 5px;
+}
+
+.form-box >img {
+  margin: 50px auto;
+  width: 200px;
+}
+
+input {
+  margin-bottom: 10px;
+  width: 250px; height: 40px;
+  border: 1px solid var(--box-border-color);
+  border-radius: 5px;
+}
+
+button {
+  width: 250px; height: 30px;
+  background-color: var(--btn-bg);
+  border-radius: 5px;
+  border: none;
+  color: var(--btn-color);
+  cursor: pointer;
+}
+
+/* 또는 */
+.main .or {
+  margin: 30px;
+  color: var(--txt-color);
+  display: flex;
+}
+
+.or .or-line {
+  width: 80px; 
+  margin-top: 10px; margin-left: 10px; margin-right: 10px;
+  border-top: 1px solid var(--box-border-color);
+}
+
+/* 페이스북 + 비밀번호 잊었을 때 */
+.facebook-box {
+  padding: 0 20px; box-sizing: border-box;
+}
+
+/* 페이스북 로그인 */
+.facebook-login {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.facebook-login img {
+  width: 20px; height: 20px;
+  margin-right: 10px;
+}
+
+.facebook-login a {
+  cursor: pointer;
+  color: var(--fb-color);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* 비밀번호 잊었을 때 */
+.forget {
+  margin: 15px 0;
+}
+
+.forget a {
+  font-size: 12px;
+  color: var(--fb-color);
+}
+
+
+/* 계정이 없을때 가입하기 join-box */
+.join-box {
+  margin: 10px 0;
+  width: 300px; height: 50px; 
+  line-height: 50px;
+  border: 1px solid var(--box-border-color);
+  border-radius: 5px;
+  text-align: center;
+}
+.join-box a {
+  font-weight: bold;
+  color: var(--btn-bg);
+  font-size: 14px;
+}
+
+/* 애플,구글 img-box */
+.appdown-box {
+  padding: 20px 0;
+  box-sizing: border-box;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.appdown-box >p {
+  margin-bottom: 20px;
+  color: var(--txt-color);
+  font-size: 14px;
+}
+
+
+.appdown-box >img {
+  width: 120px;
+  margin-left: 10px;
+}
+
+/* footer */
+footer {
+  text-align: center;
+}
+
+.footer-info {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+footer li a {
+  padding: 5px 10px;
+  color: var(--txt-color);
+}
