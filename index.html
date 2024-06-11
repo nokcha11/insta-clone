@@ -4,9 +4,86 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>login</title>
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="./style.css">
+
+  <!--favicon  -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  
+  <!-- 폰트어썸 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
   
+  <div class="wrap">
+    <div class="main">
+      <div class="form-box">
+        <img src="./assets/images/logo-light.png" alt="" id="logo">
+        <form action="./action.html" method="get">
+          <tr>
+            <input type="text" placeholder="전화번호,사용자 이름 또는 이메일" id="id">
+          </tr>
+          <tr>
+            <input type="password" placeholder="비밀번호" id="pw">
+          </tr>
+          <tr>
+            <button type="submit" class="login-btn">로그인</button>
+            </tr>
+            </form>
+
+        <div class="or">
+          <div class="or-line"></div>
+          <p>또는</p>
+          <div class="or-line"></div>
+        </div>
+    
+        <div class="facebook-box">
+          <!-- 페이스북 로그인 -->
+          <div class="facebook-login">
+            <img src="./assets/images/facebook-icon.png" alt="">
+            <a href="#">Facebook으로 로그인</a>
+          </div>
+    
+          <!-- 비밀번호 잊었을 때 -->
+          <div class="forget">
+            <a href="#">비밀번호를 잊으셨나요?</a>
+          </div>
+        </div>
+      </div>
+      <div class="join-box">
+        <p>계정이 없으신가요? <a href="">가입하기</a></p>
+      </div>
+      <div class="appdown-box">
+        <p>앱을 다운로드하세요</p>
+        <img src="./assets/images/app-store.png" alt="">
+        <img src="./assets/images/gg-play.png" alt="">
+      </div>
+      </div>
+    
+  <!-- footer -->
+    <footer>
+      <ul class="footer-info">
+        <li><a href="">Meta</a></li>
+        <li><a href="#">소개</a></li>
+        <li><a href="#">블로그</a></li>
+        <li><a href="#">채용 정보</a></li>
+        <li><a href="#">도움말</a></li>
+        <li><a href="#">API</a></li>
+        <li><a href="#">개인정보처리방침</a></li>
+        <li><a href="#">약관</a></li>
+        <li><a href="#">위치</a></li>
+        <li><a href="#">instagram life</a></li>
+        <li><a href="#" class="darkmode">Darkmode</a></li>
+      </ul>
+      <div class="copylight"><i class="fa-regular fa-copyright"></i> 2024 instagram from Meta</div>
+    </footer>
+  </div>
+  
+  <script src="./script.js"></script>
 </body>
 </html>
