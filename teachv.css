@@ -1,0 +1,252 @@
+/* common */
+* { margin: 0; padding: 0; box-sizing: border-box;}
+li { list-style-type: none;}
+a { text-decoration: none; color: inherit;}
+input, button {
+  border: none;
+  background-color: transparent;
+  outline: none; /* input에 선이 생기는 것을 없애준다 */
+}
+
+.btn-blue {
+  width: 100%;
+  padding: 12px 0;
+  background-color: var(--light-blue);
+  color: #fff; /* :root와 다크모드 전환시 색이 변경되기때문에 #fff로 색 고정 */
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+body {
+  background-color: var(--body-bg);
+  color: var(--txt-color);
+}
+
+:root {
+  --body-bg: #fafafa;
+  --box-bg: #fff;
+  --box-border-color: #dbdbdb;
+  --txt-color: #262626;
+  --txt-second-color: #8e8e8e;
+  --light-blue: #0095f6;
+  --dark-blue: #00376b;
+  --fb-color: #385185;
+}
+
+.dark {
+  --body-bg: #151515;
+  --box-bg: #353535;
+  --box-border-color: #666565;
+  --txt-color: #d2d2d2;
+}
+
+.dark-logo {
+  display: none;
+}
+
+body.dark .dark-logo {
+  display: block;
+}
+
+body.dark .light-logo {
+  display: none;
+}
+
+/* 
+.light-logo {
+  display: none;
+} */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* viewport height */
+  height: 100vh;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  width: 360px;
+}
+
+/* 두 박스 */
+.box {
+  width: 100%;
+  border: 1px solid var(--box-border-color);
+  border-radius: 4px;
+  text-align: center;
+  background-color: var(--box-bg);
+}
+
+/* 인풋만 */
+.input-box {
+  padding: 40px;
+}
+
+.logo {
+  margin: 0 auto;
+  width: 175px; height: 50px;
+}
+
+.logo img {
+  width: 100%;
+  object-fit: contain; /* 이미지 비율에 맞게 */
+}
+
+img {
+  /* width: 50px; */
+}
+
+.login-form {
+  margin-top: 40px;
+}
+
+/* id | pw */
+.animate-input {
+  position: relative; 
+  border: 1px solid var(--box-border-color);
+  height: 36px;
+  padding: 0 8px;
+  border-radius: 4px;
+  margin: 6px 0;
+}
+
+.animate-input input {
+  width: 100%; height: 100%;
+}
+
+.animate-input span {
+  position: absolute;
+  top: 10px; left: 8px;
+  font-size: 12px;
+  color: var(--box-border-color); 
+  pointer-events: none; /* input의 커서를 막고있기 때문에 커서포인트를 없애준다. */
+  transition: all 200ms ease-in-out;
+}
+
+.animate-input.active {
+  padding: 4px 8px 0;
+}
+
+.animate-input.active span {
+  top: 2px;
+  font-size: 10px;
+}
+
+/* 비밀번호 표시*/
+.userpw button{
+  position: absolute;
+  right: 8px; top: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;
+}
+
+body.dark .userpw button {
+  color: #fff;
+}
+
+/* .animate-input.userpw.active 활성화시 */
+.animate-input.active button {
+  display: inline;
+}
+
+/* 비활성화시 */
+button[type="submit"]:disabled {
+  cursor: not-allowed; /* 마우스 클릭 안되게 */
+  background-color: rgba(0, 149, 246, 0.3);
+}
+
+.or-box {
+  display: flex;
+  align-items: center; /* 부모요소에 수직정렬로 선 가운데로 */
+}
+
+/* odd : 홀수만 적용할 때 even: 짝수  */
+.or-box div:nth-child(odd) { 
+  flex-grow: 1;
+  height: 1px;
+  background: var(--box-border-color);
+}
+
+/* =.or-box div:nth-child(2) */
+.or-box div:nth-child(even) {
+  margin: 30px 16px;
+  color: var(--txt-second-color);
+  font-weight: bold;
+}
+
+.fb-btn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fb-btn img {
+  width: 16px; height: 16px;
+  object-fit: contain;
+  margin-right: 8px;
+}
+
+.fb-btn span {
+  color: var(--fb-color);
+  font-weight: bold;
+}
+
+.forgot-pw {
+  display: block; 
+  margin-top: 22px; /* inline요소는 상하값이 적용되려면 block으로 바꾼다 */
+  font-size: 12px;
+  color: var(--dark-blue);
+}
+
+body.dark .forgot-pw {
+  color: #fff;
+}
+
+.join-box {
+  margin-top: 12px;
+  padding: 16px 0;
+}
+
+.join-box span {
+  color: var(--light-blue);
+  font-weight: bold;
+}
+
+.app-txt {
+  margin: 20px 0;
+}
+
+.app-down img {
+  width: 136px; height: 46px;
+  object-fit: contain;
+}
+
+footer {
+  text-align: center;
+}
+
+.footer-menu-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-menu-list a {
+  padding: 0 8px;
+  color: var(--txt-second-colorcolor);
+  font-size: 14px;
+}
+
+.copyright {
+  margin: 30px 0;
+  color: var(--txt-second-color);
+}
