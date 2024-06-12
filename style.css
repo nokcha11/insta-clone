@@ -17,7 +17,7 @@ a { text-decoration: none; color: inherit;}
 
 .dark {
   --body-bg: #151515;
-  --box-bg: #151515;
+  --box-bg: #353535;
   --box-border-color: #262626;
   --txt-color: #d2d2d2;
 }
