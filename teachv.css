@@ -2,28 +2,32 @@
 * { margin: 0; padding: 0; box-sizing: border-box;}
 li { list-style-type: none;}
 a { text-decoration: none; color: inherit;}
+
+/* input, 버튼 */
 input, button {
   border: none;
   background-color: transparent;
-  outline: none; /* input에 선이 생기는 것을 없애준다 */
+  outline: none; 
+  /* outline: input에 선이 생기는 것을 없애준다 */
 }
 
 .btn-blue {
   width: 100%;
   padding: 12px 0;
   background-color: var(--light-blue);
-  color: #fff; /* :root와 다크모드 전환시 색이 변경되기때문에 #fff로 색 고정 */
+  /* :root와 다크모드 전환시 색이 변경되기때문에 #fff로 색 고정 */
+  color: #fff; 
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
 }
-
 
 body {
   background-color: var(--body-bg);
   color: var(--txt-color);
 }
 
+/* 색상 설정 */
 :root {
   --body-bg: #fafafa;
   --box-bg: #fff;
@@ -42,6 +46,7 @@ body {
   --txt-color: #d2d2d2;
 }
 
+/* dark mode */
 .dark-logo {
   display: none;
 }
@@ -77,7 +82,7 @@ body.dark .light-logo {
   width: 360px;
 }
 
-/* 두 박스 */
+/* input+box + join-box */
 .box {
   width: 100%;
   border: 1px solid var(--box-border-color);
