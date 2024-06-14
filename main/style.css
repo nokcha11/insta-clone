@@ -1,0 +1,65 @@
+/* common */
+* { margin: 0; padding: 0; box-sizing: border-box;}
+li { list-style-type: none;}
+a { text-decoration: none; color: inherit;}
+
+
+/* 색상 설정 */
+:root {
+  --body-bg: #fafafa;
+  --box-bg: #fff;
+  --box-border-color: #dbdbdb;
+  --txt-color: #262626;
+  --txt-second-color: #8e8e8e;
+  --light-blue: #0095f6;
+  --dark-blue: #00376b;
+  --fb-color: #385185;
+}
+
+.dark {
+  --body-bg: #151515;
+  --box-bg: #353535;
+  --box-border-color: #666565;
+  --txt-color: #d2d2d2;
+}
+
+.wrapper {
+
+}
+
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  border-bottom: 2px solid var(--box-border-color);
+  padding: 20px 100px;
+}
+
+header .logo {
+  width: 160px; 
+}
+
+header .logo img {
+  width: 100%;
+}
+
+header ul {
+  display: flex;
+}
+
+header ul li a {
+  margin: 5px 10px;
+}
+
+
+/* main */
+main {
+  margin: 0 auto;
+  border: 1px solid #000;
+}
+
+.name-tag img {
+  width: 50px;
+}
