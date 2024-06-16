@@ -160,7 +160,7 @@ button.blue-btn {
 
 
 /* fixed-tag */
-.fixed-tag {
+.sticky-tag {
   margin: 20px 0;
   width: 500px; height: 400px;
   position: sticky;
@@ -169,27 +169,27 @@ button.blue-btn {
   border-radius: 7px;
 }
 
-.fixed-tag .top-tag {
+.sticky-tag .top-tag {
   margin: 5px 10px;
   display: flex;
   align-items: center;
 }
 
-.fixed-tag >div img {
+.sticky-tag >div img {
   width: 50px; height: 50px;
   border-radius: 50%;
 }
 
-.fixed-tag .top-tag .txt {
+.sticky-tag .top-tag .txt {
   padding: 5px 10px;
   font-size: 12px;
 }
 
-.fixed-tag .top-tag .txt p {
+.sticky-tag .top-tag .txt p {
   color: var(--txt-second-color);
 }
 
-.fixed-tag input, button {
+.sticky-tag input, button {
   font-weight: bold;
 }
 
