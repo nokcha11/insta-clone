@@ -3,6 +3,12 @@
 li { list-style-type: none;}
 a { text-decoration: none; color: inherit;}
 
+input, button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
 
 /* 색상 설정 */
 :root {
@@ -23,10 +29,6 @@ a { text-decoration: none; color: inherit;}
   --txt-color: #d2d2d2;
 }
 
-.wrapper {
-
-}
-
 /* header */
 header {
   display: flex;
@@ -45,6 +47,10 @@ header .logo img {
   width: 100%;
 }
 
+.header-menu-list {
+  font-size: 25px;
+}
+
 header ul {
   display: flex;
 }
@@ -56,10 +62,152 @@ header ul li a {
 
 /* main */
 main {
-  margin: 0 auto;
-  border: 1px solid #000;
+  display: flex;
+  width: 1200px;
+  margin: 50px auto 100px auto;
 }
 
-.name-tag img {
-  width: 50px;
+section {
+  margin: 20px;
+  border: 2px solid var(--box-border-color);
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+section .top-tag {
+  margin: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section .top-tag .tag-left {
+  display: flex;
+}
+
+section .top-tag .tag-left .txt {
+  margin: 0 20px;
+}
+
+/* section 상단 이미지 */
+section .top-tag .tag-left >img {
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* section 이미지 */
+.img-box {
+  margin-bottom: 5px;
+}
+.img-box img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* reaction */
+.comments .reaction {
+  margin: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* like */
+.like {
+  margin: 5px 10px;
+  display: flex;
+  justify-content: left;
+}
+
+/* ments */
+.ments {
+  margin: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ment {
+  display: flex;
+}
+
+.ment-reply {
+  padding-left: 10px;
+  color: var(--txt-second-color);
+}
+
+.ments-react {
+  color: var(--txt-second-color);
+}
+
+.time-ago {
+  margin: 10px 10px;
+  color: var(--txt-second-color);
+}
+
+form {
+  padding: 15px 10px;
+  border-top: 2px solid var(--box-border-color);
+  display: flex;
+  justify-content: space-between;
+}
+
+button.blue-btn {
+  color: var(--light-blue);
+  font-weight: bold;
+}
+
+
+
+/* fixed-tag */
+.fixed-tag {
+  margin: 20px 0;
+  width: 500px; height: 400px;
+  position: sticky;
+  top: 0; right: 0;
+  border: 2px solid var(--box-border-color);
+  border-radius: 7px;
+}
+
+.fixed-tag .top-tag {
+  margin: 5px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.fixed-tag >div img {
+  width: 50px; height: 50px;
+  border-radius: 50%;
+}
+
+.fixed-tag .top-tag .txt {
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.fixed-tag .top-tag .txt p {
+  color: var(--txt-second-color);
+}
+
+.fixed-tag input, button {
+  font-weight: bold;
+}
+
+.recommend-list {
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.recommend-list img {
+  width: 30px; height: 30px;
+  border-radius: 50%;
+}
+
+.recommend-list .txt {
+  padding: 0 10px;
+}
+
+.recommend-list .txt p {
+  color: var(--txt-second-color);
 }
