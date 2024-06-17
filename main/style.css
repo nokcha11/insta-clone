@@ -167,8 +167,12 @@ button.blue-btn {
   top: 0; right: 0;
   border: 2px solid var(--box-border-color);
   border-radius: 7px;
+  background-color: var(--box-bg);
 }
 
+.recommend-form {
+  border: none;
+}
 .sticky-tag .top-tag {
   margin: 5px 10px;
   display: flex;
