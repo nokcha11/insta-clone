@@ -218,8 +218,14 @@ button.blue-btn {
 }
 
 /* dot list */
+.overlay-feed.active {
+  visibility: visible;
+  opacity: 1;
+}
+
 .overlay-feed {
-  /* display: none; */
+  visibility: hidden;
+  opacity: 0;
   width: 100%; height: 100%;
   position: fixed;
   top: 0; bottom: 0; left: 0; right: 0;
@@ -244,11 +250,22 @@ button.blue-btn {
 .feed-list li:not(:last-child) {
   border-bottom: 1px solid var(--box-border-color);
 }
+  
+#img-canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
 
 
 /* header popup창 */
-.overlay {
-  display: none;
+.overlay-popup.active {
+  visibility: visible;
+  opacity: 1;
+}
+.overlay-popup {
+  visibility: hidden;
+  opacity: 0;
   width: 100%; height: 100%;
   position: fixed;
   top: 0; bottom: 0; left: 0; right: 0;
@@ -267,12 +284,29 @@ button.blue-btn {
 }
 
 #popup .pop-img-box {
- height: 200px; 
- margin: 75px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 500px;
+  height: 400px;
 }
 
 #popup .pop-img-box img {
   width: 100px; height: 100px;
+}
+
+.plus_icon {
+  width: 80px;
+  height: 80px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 }
 
 .popup-form {
