@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>main | main</title>
+  <title>insta | main</title>
 
   <link rel="stylesheet" href="./style.css">
   
@@ -30,7 +30,7 @@
       </h1>
 
       <ul class="header-menu-list">
-        <li class="pop"><i class="fa-regular fa-square-plus" ></i></li>
+        <li class="pop-btn"><i class="fa-regular fa-square-plus" ></i></li>
         <li><a href=""><i class="fa-regular fa-compass"></i></a></li>
         <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
         <li><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
@@ -49,7 +49,7 @@
                 <p>Sejong, South Korea</p>
               </div>
             </div>
-            <i class="fa-solid fa-ellipsis"></i>
+            <i class="fa-solid fa-ellipsis feed-list-btn"></i>
           </div>
           <div class="img-box">
             <img src="./images/멍.jpeg" alt="">
@@ -215,22 +215,34 @@
       <li><a href="">공유 대상...</a></li>
       <li><a href="">링크 복사</a></li>
       <li><a href="">퍼가기</a></li>
-      <li><a href="">취소</a></li>
+      <li class="feed-close-btn"><a href="">취소</a></li>
     </ul>
    </div>
 
     <!-- popup -->
-     <div class="overlay">
+     <div class="overlay-popup">
+      <!-- close버튼 -->
+      <button class="popup-close-btn" type="button">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
       <div id="popup">
         <h4>새 게시물 만들기</h4>
+
         <div class="pop-img-box">
-          <img src="./images/upload.png" alt="">
+
+          <div class="plus_icon">
+            <img src="./images/upload.png" alt="">
+          </div>
+
           <h4>포스트 이미지 추가</h4>
+          <canvas id="img-canvas"></canvas>
         </div>
+
         <form action="" class="popup-form">
-          <input type="file">
-          <textarea name="" id=""></textarea>
-          <button type="button" class="bg-blue-btn">공유하기</button>
+          <input type="file" required="required" class="file-upload-btn">
+          <textarea name="content" id="text_field" cols="50" rows="5" placeholder="문구를 입력하세요..."></textarea>
+          
+          <button type="submit" class="bg-blue-btn">공유하기</button>
         </form>
       </div>
     </div>
