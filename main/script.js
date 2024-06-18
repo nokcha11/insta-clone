@@ -37,9 +37,11 @@ feedCloseBtn.addEventListener('click', () => {popupClose(overlayFeed)})
 
 
 // Canvas image
-let fileUploadBtn  = document.getElementById('file-upload-btn');
+let fileUploadBtn  = document.querySelector('.file-upload-btn');
 let canvas = document.getElementById('img-canvas');
 let ctx = canvas.getContext('2d');
+
+console.log(fileUploadBtn);
 
 function handleImage(e){
   let reader = new FileReader();
