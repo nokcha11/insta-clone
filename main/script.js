@@ -1,6 +1,6 @@
-let uploadPopup = document.querySelector('.upload-wrapper');
-let postAddBtn = document.querySelector('.post-upload-btn');
-let postCloseBtn = document.querySelector('.post-close-btn');
+let popup = document.querySelector('.overlay-popup');
+let popAddBtn = document.querySelector('.pop-btn');
+let popCloseBtn = document.querySelector('.popup-close-btn');
 
 
 function popupOpen(item) {
@@ -17,23 +17,23 @@ function popupClose(item) {
 // postAddBtn.addEventListener('click', popupOpen);
 
 // 매개변수가 있을 경우 => () => { popupOpen(매개변수) }
-postAddBtn.addEventListener('click', () => {popupOpen(uploadPopup)});
-postCloseBtn.addEventListener('click', () => {popupClose(uploadPopup)});
+popAddBtn.addEventListener('click', () => {popupOpen(popup)});
+popCloseBtn.addEventListener('click', () => {popupClose(popup)});
 
 
 // Option Btn
-let optionPopup = document.querySelector('.more-option');
-let optionBtn = document.querySelectorAll('.option-btn');
-console.log(optionBtn)
-let optionCloseBtn = document.querySelector('.option-close-btn');
+let overlayFeed = document.querySelector('.overlay-feed');
+let feedListBtn = document.querySelectorAll('.feed-list-btn');
+console.log(feedListBtn)
+let feedCloseBtn = document.querySelector('.feed-close-btn');
 
-optionBtn.forEach((btn) => {
+feedListBtn.forEach((btn) => {
   btn.addEventListener('click', () => {
-    popupOpen(optionPopup)
+    popupOpen(overlayFeed)
   })
 })
 
-optionCloseBtn.addEventListener('click', () => {popupClose(optionPopup)})
+feedCloseBtn.addEventListener('click', () => {popupClose(overlayFeed)})
 
 
 // Canvas image
