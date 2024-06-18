@@ -236,7 +236,7 @@ button.blue-btn {
   position: absolute;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
-  width: 300px; /* height: 700px; */
+  width: 300px; 
   background-color: var(--box-bg);
   text-align: center;
   z-index: 1;
@@ -250,13 +250,6 @@ button.blue-btn {
 .feed-list li:not(:last-child) {
   border-bottom: 1px solid var(--box-border-color);
 }
-  
-#img-canvas {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-
 
 /* header popup창 */
 .overlay-popup.active {
@@ -292,6 +285,12 @@ button.blue-btn {
   margin: 20px auto;
   max-width: 500px;
   height: 400px;
+}
+
+#img-canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
 #popup .pop-img-box img {
